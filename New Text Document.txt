@@ -1,0 +1,5 @@
+1. class diagram
+2. interface(GUI)
+3. sequence diragram
+4. state diagram
+5. 
