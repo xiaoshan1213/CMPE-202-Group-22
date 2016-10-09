@@ -13,17 +13,23 @@ public class BattleshipBlue extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int number;
+    int answer;
+    int key=0;;
     
-    public BattleshipBlue(int x){
+    public BattleshipBlue(int x,int ans){
         number=x;
+        this.answer=ans;
     }
     
     public void act() 
     {
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
+            if(this.number==this.answer) key=1;
+            World world=getWorld();
+            world.showText(""+this.number+"",this.getX(),this.getY());
             world.removeObject(this);
-            showText(number,this.getX(),this.getY());
+            if(key==1) world.showText("Blue win",200,200);
         };
     }    
     

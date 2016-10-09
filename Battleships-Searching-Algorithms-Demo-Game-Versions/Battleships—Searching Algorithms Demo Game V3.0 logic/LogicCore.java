@@ -4,11 +4,11 @@ public class LogicCore extends Actor
 {
     
     public void act() {
-        Greenfoot.ask("what number");
+        //Greenfoot.ask("what number");
     }  
     
     //linearArr for blue team
-    public int[] generateLinearArr(int x) {
+    public static int[] generateLinearArr(int x) {
         int[] linearArr=new int[26];
         int position=Greenfoot.getRandomNumber(26);
         for(int i=0;i<26;i++){
@@ -19,14 +19,12 @@ public class LogicCore extends Actor
     }
     
     //bsArr for red team
-    public int[] generateBSArr(int x) {
+    public  static int[] generateBSArr() {
         int[] bsArr=new int[26];
         int position=Greenfoot.getRandomNumber(26);
         for(int i=0;i<26;i++){
             bsArr[i]=Greenfoot.getRandomNumber(1001);
         }
-        bsArr[position]=x;
-        java.util.Arrays.sort(bsArr);
         return bsArr;
     }
     
